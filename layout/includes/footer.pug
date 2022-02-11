@@ -8,10 +8,16 @@
       .copyright!= `&copy;${nowYear} By ${config.author}`
   if theme.footer.copyright
     .framework-info
-      span= _p('footer.framework') + ' '
-      a(href='https://hexo.io')= 'Hexo'
-      span.footer-separator |
-      span= _p('footer.theme') + ' '
-      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+      //- 框架主题信息
+      //- span= _p('footer.framework') + ' '
+      //- a(href='https://hexo.io')= 'Hexo'
+      //- span.footer-separator |
+      //- span= _p('footer.theme') + ' '
+      //- a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+
+      //- 引入备案信息
+      //- <img src="https://s4.ax1x.com/2022/01/31/HiNgc8.png"><a href="http://www.beian.miit.gov.cn/"  style="color:#ffffff" target="_blank">粤ICP备2022014073号-1</a>
+      <p><a style="margin-inline:5px" target="_blank" href="http://www.beian.miit.gov.cn/"><img src="https://img.shields.io/badge/%E7%B2%A4ICP%E5%A4%87-2022014073%E5%8F%B7--1-yellowgreen" title="备案信息"></a></p>
+
   if theme.footer.custom_text
     .footer_custom_text!=`${theme.footer.custom_text}`

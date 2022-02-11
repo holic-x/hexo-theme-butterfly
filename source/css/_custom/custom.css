@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+
+/*
+h1#site-title {
+    font-family: 'Zhi Mang Xing', cursive;
+}
+*/
+
+/* 自定义字体引入 */
+@font-face{
+    font-family:'SudestadaFont' ;  /* 字体名自定义即可 */
+    src:url('/wv-blog/font/Sudestada.ttf'); 
+    font-display: swap;
+}
+@font-face{
+    font-family:'minijxhkFont' ;  /* 字体名自定义即可 */
+    src:url('/wv-blog/font/minijxhk.TTF'); /* 迷你简细行楷 */
+    font-display: swap;
+}
+@font-face{
+    font-family:'Snell-RoundhandFont' ;  /* 字体名自定义即可 */
+    src:url('/wv-blog/font/Snell-Roundhand.ttf'); 
+    font-display: swap;
+}
+
+/* 站点 title */
+h1#site-title {
+    font-family:'SudestadaFont', sans-serif ; /* 定义多个备用字体，如果主题包没有字体支持则自下寻找 */
+}
+
+/* 全局默认鼠标指针 */
+body,
+html{
+  cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Pointer.cur'),auto !important;
+}
+/* 悬停图片时的鼠标指针 */
+img{
+  cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Cross.cur'),auto !important;
+}
+/* 选择链接标签时的鼠标指针 */
+a:hover{
+    cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Link.cur'),auto;
+}
+/* 选中输入框时的鼠标指针 */
+input:hover{
+    cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Text.cur'),auto;
+}
+/* 悬停按钮时的鼠标指针 */
+button:hover{
+    cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Pointer.cur'),auto;
+}
+/* 悬停列表标签时的鼠标指针 */
+i:hover{
+    cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Link.cur'),auto;
+}
+/* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */
+#footer-wrap a:hover{
+      cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Link.cur'),auto;
+}
+/* 悬停页码时的鼠标指针 */
+#pagination .page-number:hover{
+      cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Link.cur'),auto;
+}
+/* 悬停菜单栏时的鼠标指针 */
+#nav .site-page:hover{
+      cursor: url('https://cdn.jsdelivr.net/gh/holic-x/cdn-repo/wv-blog/assets/cur/ComixCursors/Help.cur'),auto;
+}
+
