@@ -19,8 +19,7 @@ if theme.aside.card_webinfo.enable
       if theme.busuanzi.site_uv 
         .webinfo-item
           .item-name= _p('aside.card_webinfo.site_uv_name') + " :"
-          // .item-count#busuanzi_value_site_uv
-          .item-count#busuanzi_value_site_uv + theme.busuanzi.init_uv 
+          .item-count#busuanzi_value_site_uv
       if theme.busuanzi.site_pv
         .webinfo-item
           .item-name= _p('aside.card_webinfo.site_pv_name') + " :"
@@ -29,4 +28,29 @@ if theme.aside.card_webinfo.enable
         .webinfo-item
           .item-name= _p('aside.card_webinfo.last_push_date.name') + " :"
           .item-count#last-push-date(data-lastPushDate=date_xml(Date.now()))
+
+    //- count init site pv/uv
+    script.
+        function checkPv(){ 
+            var init_site_pv = parseInt(!{theme.busuanzi.init_site_pv})
+            var pv = document.getElementById("busuanzi_value_site_pv")
+            if (pv.innerText === ''){
+            setTimeout(checkPv, 100)
+            } else {
+                pv.innerText = parseInt(pv.innerText) + init_site_pv
+            }
+        }
+    script checkPv()
+
+    script.
+        function checkUv(){ 
+            var init_site_uv = parseInt(!{theme.busuanzi.init_site_uv})
+            var uv = document.getElementById("busuanzi_value_site_uv")
+            if (uv.innerText === ''){
+            setTimeout(checkUv, 100)
+            }else{
+                uv.innerText = parseInt(uv.innerText) + init_site_uv
+            }
+        }
+    script checkUv()
 
