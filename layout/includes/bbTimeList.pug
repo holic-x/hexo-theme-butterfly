@@ -1,0 +1,30 @@
+#bbTimeList.bbTimeList
+    #bber-talk.js-pjax(onclick="location='/wv-blog/bber/'")
+        ul#con1
+        ul#con2
+    .js-pjax
+        link(rel='stylesheet', href='/wv-blog/resources/css/show_bber_in_index.css', type='text/css')
+        script(src='/wv-blog/resources/js/show_bber_in_index.js',data-pjax='',defer='')
+        script(type='text/javascript').
+            var area = document.getElementById('bber-talk');
+            var con1 = document.getElementById('con1');
+            var con2 = document.getElementById('con2');
+            var mytimer1 = null;
+            var mytimer = null;
+            var time = 500 / 60;
+            con2.innerHTML = con1.innerHTML;
+            function scrollUp () {
+            if (area.scrollTop >= (con1.offsetHeight)) {
+                area.scrollTop = 0;
+            } else {
+                if (area.scrollTop % 25 == 0) {
+                        clearInterval(mytimer);
+                        clearInterval(mytimer1);
+                    mytimer1 = setTimeout(function () {
+                        mytimer = setInterval(scrollUp, time);
+                    }, 5000);
+                }
+                area.scrollTop++;
+                }
+            }
+            mytimer = setInterval(scrollUp, time);

@@ -1,0 +1,18 @@
+//- link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/zhheo/JS-Heo@main/bb/bber.css', type='text/css')
+
+link(rel='stylesheet', href='/wv-blog/resources/css/bber.css', type='text/css')
+
+style(type='text/css').
+  .timeline ul li::before{
+    background-image: url(https://blog.holic-x.com/img/avatar.jpg); 
+  }
+h1.page-title(style='display: inline;')= page.title
+#bber-loading
+#bber-tips(style='color: var(--heo-secondtext);')
+  | 叨叨日常，记录碎片化内容
+#bber
+  .js-pjax
+    script.
+        var bbapiurl = "https://686f-holic-cloud-base-5fsee8742a2275f-1305292171.tcb.qcloud.la/json/bber.json?sign=ba9a70982325a55393e64b5f1371c170&t=1645696781"
+     script(type='text/javascript', src='/wv-blog/resources/js/bber.js', data-pjax='')
+    
